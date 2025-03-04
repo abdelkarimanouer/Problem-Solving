@@ -1,0 +1,83 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <ctime>
+using namespace std;
+
+float ReadPositiveNumber(string Msg)
+{
+    int Number = 0;
+    do
+    {
+        cout << Msg;
+        cin >> Number;
+    } while (Number <= 0);
+
+    return Number;   
+}
+
+int RandomNumber(int From, int To) 
+{   
+    int randNum = rand() % (To - From + 1) + From; 
+
+    return randNum; 
+} 
+
+void Swap(int& A, int& B)
+{
+    int Temp;
+    
+    Temp = A;
+    A = B;
+    B = Temp;
+
+}
+
+void FillArray1ToN(int arr[100], int arrLength)
+{
+    for (int i = 0; i < arrLength; i++)
+    { 
+        arr[i] = i + 1;
+    }
+}
+
+void PrintArray(int arr[100],int arrLength)
+{
+    for (int i = 0; i < arrLength; i++)
+        cout << arr[i] << " ";
+
+    cout << endl;    
+}
+
+void ShuffleArray(int arr[100], int arrLength)
+{
+    for (int i = 0; i < arrLength; i++)
+    {
+        Swap(arr[RandomNumber(1,arrLength) - 1], arr[RandomNumber(1, arrLength) - 1]);
+    }
+    
+}
+
+int main()
+{
+    srand((unsigned)time(NULL));
+
+    int arr[100];
+    int arrLength = ReadPositiveNumber("Please enter how maney elements :"); 
+
+    FillArray1ToN(arr, arrLength); 
+   
+    cout << "\nArray 1 Elements Before shuffle : " << endl;
+    PrintArray(arr, arrLength);
+
+    ShuffleArray(arr, arrLength);    
+
+    cout << "\nArray 2 Elements After shuffle :" << endl;
+    PrintArray(arr, arrLength);
+
+    cout << endl;
+
+    return 0;
+}
+
+
