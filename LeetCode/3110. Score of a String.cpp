@@ -1,5 +1,4 @@
-class Solution {
-public:
+
     int scoreOfString(string s) 
     {
  int v[20];
@@ -16,4 +15,3 @@ public:
 
     return rs;
     }
-};

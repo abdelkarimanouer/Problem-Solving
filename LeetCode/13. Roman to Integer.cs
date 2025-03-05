@@ -1,4 +1,3 @@
-public class Solution {
     public int RomanToInt(string s) {
                 int Number = 0;
 
@@ -32,5 +31,4 @@ public class Solution {
 
         return Number;
     }
-}
 

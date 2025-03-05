@@ -1,5 +1,5 @@
-public class Solution {
-    public int[] TwoSum(int[] nums, int target) {
+    public int[] TwoSum(int[] nums, int target) 
+    {
         int[] n = new int[2];
 
         for (int i = 0; i < nums.Length; i++)
@@ -18,4 +18,3 @@ public class Solution {
         
         return n = new int[2];
     }
-}

@@ -1,6 +1,5 @@
 using System.Text.RegularExpressions;
 
-public class Solution {
     public bool IsPalindrome(string s) {
         s = s.ToLower();
         s = Regex.Replace(s, @"[^a-zA-Z0-9]", "");
@@ -21,4 +20,3 @@ public class Solution {
 
         return false;
     }
-}

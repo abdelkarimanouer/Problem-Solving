@@ -1,5 +1,4 @@
-class Solution {
-public:
+
 int finalValueAfterOperations(vector<string>& operations) {
         int X = 0;
         for (string oper : operations) {
@@ -10,4 +9,3 @@ int finalValueAfterOperations(vector<string>& operations) {
         }
         return X;
     }
-};
